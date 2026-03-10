@@ -2,7 +2,7 @@ name: Keep API Awake
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   ping:
