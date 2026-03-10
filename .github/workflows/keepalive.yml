@@ -3,6 +3,7 @@ name: Keep API Awake
 on:
   schedule:
     - cron: "* * * * *"
+  workflow_dispatch:
 
 jobs:
   ping:
@@ -10,8 +11,8 @@ jobs:
     steps:
       - name: Ping API
         run: |
-          curl -s https://menuzito-api.onrender.com/health
+          curl -fsS https://menuzito-api.onrender.com/health
           sleep 10
-          curl -s https://menuzito-api.onrender.com/health
+          curl -fsS https://menuzito-api.onrender.com/health
           sleep 10
-          curl -s https://menuzito-api.onrender.com/health
+          curl -fsS https://menuzito-api.onrender.com/health
