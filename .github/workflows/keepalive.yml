@@ -9,4 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping API
-        run: curl -s https://menuzito-api.onrender.com/health
+        run: |
+          curl -s https://menuzito-api.onrender.com/health
+          sleep 10
+          curl -s https://menuzito-api.onrender.com/health
+          sleep 10
+          curl -s https://menuzito-api.onrender.com/health
